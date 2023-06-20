@@ -264,6 +264,8 @@
             width: 100%;
             height: auto;
 
+            margin-top: 90px;
+
             img {
                 width: 100%;
                 height: auto;
@@ -274,17 +276,24 @@
     &detailed {
         background: v.$gray03;
 
+        margin-top: -4px;
+        padding-top: 34px;
+
         &__inner {
-            max-width: 1000px;
+            max-width: 512px;
             height: auto;
 
             margin: 0 auto;
-            padding-top: 158px;
+            padding-top: 60px;
+
+            background: v.$white01;
         }
 
         &__title {
             max-width: 77px;
             height: auto;
+
+            margin: 0 auto;
 
             img {
                 width: 100%;
