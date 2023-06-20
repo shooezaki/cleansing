@@ -1,0 +1,32 @@
+.l- {
+    &header {
+        position: fixed;
+        // top: 234px;
+        top: 50%;
+        left: 45px;
+        transform: translateY(-50%);
+        z-index: 100;
+
+        display: inline-block;
+
+        &__inner {
+            display: inline-block;
+        }
+
+        &__sns {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            row-gap: 9px;
+
+            &Logo {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                justify-content: center;
+                row-gap: 12px;
+            }
+        }
+    }
+}

@@ -1,0 +1,28 @@
+@use "./valiables" as v;
+
+// breakpoint
+$breakpoints: (
+  "sp": "screen and (max-width: 599px)",
+  "tab": "screen and (max-width: 1023px)",
+  "pc-tab": "screen and (min-width: 600px)",
+  "pc-only": "screen and (min-width: 1024px)",
+  "tab-only": "screen and (min-width: 600px) and (max-width: 1023px)",
+);
+
+// hover
+@mixin hover01 {
+  transition: opacity v.$transition01;
+  &:hover {
+    opacity: v.$opacity01;
+  }
+}
+
+// font
+@mixin fontSet01 {
+	font-family: v.$font-famiry-sans-serif01;
+	font-size: v.$font_size07;
+	font-weight: 350;
+	line-height: 1.0em;
+  letter-spacing: -0.01em;
+	color: v.$gray02;
+}
