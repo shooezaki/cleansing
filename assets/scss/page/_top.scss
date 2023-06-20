@@ -284,9 +284,11 @@
             height: auto;
 
             margin: 0 auto;
-            padding-top: 60px;
+            padding: 60px 40px 60px 40px;
 
             background: v.$white01;
+
+            border-radius: 18px;
         }
 
         &__title {
@@ -298,6 +300,59 @@
             img {
                 width: 100%;
                 height: auto;
+            }
+        }
+
+        &__list {
+            display: flex;
+            flex-direction: row;
+            flex-wrap: wrap;
+            column-gap: 16px;
+            row-gap: 10px;
+            justify-content: center;
+            align-items: center;
+
+            margin-top: 44px;
+            
+            &Item {
+                width: 87px;
+                height: auto;
+
+                img {
+                    width: 100%;
+                    height: auto;
+                }
+            }
+        }
+
+        &__add {
+            margin-top: 70px;
+
+            &List {
+                position: relative;
+
+                width: 100%;
+                height: auto;
+
+                img {
+                    width: 100%;
+                    height: auto;
+                }
+
+                &::before {
+                    content: "";
+                    display: block;
+
+                    position: absolute;
+                    top: -42px;
+                    left: -38px;
+
+                    width: 115px;
+                    height: 78px;
+                    background-image: url(../img/top/add_hukidashi.png);
+                    background-repeat: no-repeat;
+                    background-size: cover;
+                }
             }
         }
     }

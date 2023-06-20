@@ -503,8 +503,9 @@ ul {
   max-width: 512px;
   height: auto;
   margin: 0 auto;
-  padding-top: 60px;
+  padding: 60px 40px 60px 40px;
   background: #fff;
+  border-radius: 18px;
 }
 .p-detailed__title {
   max-width: 77px;
@@ -514,4 +515,47 @@ ul {
 .p-detailed__title img {
   width: 100%;
   height: auto;
+}
+.p-detailed__list {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  -moz-column-gap: 16px;
+       column-gap: 16px;
+  row-gap: 10px;
+  justify-content: center;
+  align-items: center;
+  margin-top: 44px;
+}
+.p-detailed__listItem {
+  width: 87px;
+  height: auto;
+}
+.p-detailed__listItem img {
+  width: 100%;
+  height: auto;
+}
+.p-detailed__add {
+  margin-top: 70px;
+}
+.p-detailed__addList {
+  position: relative;
+  width: 100%;
+  height: auto;
+}
+.p-detailed__addList img {
+  width: 100%;
+  height: auto;
+}
+.p-detailed__addList::before {
+  content: "";
+  display: block;
+  position: absolute;
+  top: -42px;
+  left: -38px;
+  width: 115px;
+  height: 78px;
+  background-image: url(../img/top/add_hukidashi.png);
+  background-repeat: no-repeat;
+  background-size: cover;
 }/*# sourceMappingURL=style.css.map */
