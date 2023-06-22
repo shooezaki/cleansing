@@ -807,6 +807,15 @@ ul {
   background: #fff;
   border-radius: 222px;
 }
+.p-step__inner .slider {
+  margin: 30px auto 0;
+  max-width: 500px;
+  width: 80%;
+}
+.p-step__inner .slick-img img {
+  height: auto;
+  width: 100%;
+}
 .p-step__title {
   width: 375px;
   height: auto;
