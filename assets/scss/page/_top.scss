@@ -377,17 +377,6 @@
             background: v.$white01;
 
             border-radius: 222px;
-
-            .slider {
-                margin: 30px auto 0;
-                max-width: 500px;
-                width: 80%;
-            }
-            
-            .slick-img img {
-                height: auto;
-                width: 100%;
-            }
         }
 
         &__title {
@@ -399,6 +388,28 @@
             img {
                 width: 100%;
                 height: auto;
+            }
+        }
+
+        &__sliderList {
+            max-width: 1038px;
+            height: auto;
+
+            margin: 0 auto;
+            
+            &Item {
+                max-width: 750px;
+                height: auto;
+
+                &Pic {
+                    max-width: 332px;
+                    height: auto;
+
+                    img {
+                        width: 100%;
+                        height: auto;
+                    }
+                }
             }
         }
     }
