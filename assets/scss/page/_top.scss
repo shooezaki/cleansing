@@ -396,18 +396,56 @@
             height: auto;
 
             margin: 0 auto;
+
+            & > &Item:not(:first-child) {
+                display: none;
+            }
             
             &Item {
-                max-width: 750px;
+                // max-width: 750px;
+                width: 100%;
                 height: auto;
 
-                &Pic {
-                    max-width: 332px;
-                    height: auto;
+                margin: 0 auto;
 
-                    img {
-                        width: 100%;
+                &Content {
+                    max-width: 750px;
+                    height: auto;
+                    
+                    margin: 0 auto;
+
+                    &Pic {
+                        max-width: 332px;
                         height: auto;
+    
+                        img {
+                            width: 100%;
+                            height: auto;
+                        }
+                    }
+
+                    &Info {
+                        &Title {
+                            max-width: 225px;
+                            height: auto;
+
+                            img {
+                                width: 100%;
+                                height: auto;
+                            }
+                        }
+
+                        &Text {
+                            max-width: 350px;
+                            height: auto;
+
+                            @include m.fontSet01;
+
+                            &--small {
+                                font-size: v.$font-size03;
+                                line-height: 1.0em;
+                            }
+                        }
                     }
                 }
             }

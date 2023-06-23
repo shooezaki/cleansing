@@ -855,15 +855,46 @@ ul {
   height: auto;
   margin: 0 auto;
 }
+.p-step__sliderList > .p-step__sliderListItem:not(:first-child) {
+  display: none;
+}
 .p-step__sliderListItem {
+  width: 100%;
+  height: auto;
+  margin: 0 auto;
+}
+.p-step__sliderListItemContent {
   max-width: 750px;
   height: auto;
+  margin: 0 auto;
 }
-.p-step__sliderListItemPic {
+.p-step__sliderListItemContentPic {
   max-width: 332px;
   height: auto;
 }
-.p-step__sliderListItemPic img {
+.p-step__sliderListItemContentPic img {
   width: 100%;
   height: auto;
+}
+.p-step__sliderListItemContentInfoTitle {
+  max-width: 225px;
+  height: auto;
+}
+.p-step__sliderListItemContentInfoTitle img {
+  width: 100%;
+  height: auto;
+}
+.p-step__sliderListItemContentInfoText {
+  max-width: 350px;
+  height: auto;
+  font-family: "noto sans jp", sans-serif;
+  font-size: 1.6rem;
+  font-weight: 300;
+  line-height: 2em;
+  letter-spacing: -0.01em;
+  color: #000;
+}
+.p-step__sliderListItemContentInfoText--small {
+  font-size: 1.4rem;
+  line-height: 1em;
 }/*# sourceMappingURL=style.css.map */
