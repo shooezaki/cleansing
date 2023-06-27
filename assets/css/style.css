@@ -864,6 +864,9 @@ ul {
   margin: 0 auto;
 }
 .p-step__sliderListItemContent {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
   max-width: 750px;
   height: auto;
   margin: 0 auto;

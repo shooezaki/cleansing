@@ -409,6 +409,10 @@
                 margin: 0 auto;
 
                 &Content {
+                    display: flex;
+                    flex-direction: row;
+                    flex-wrap: nowrap;
+
                     max-width: 750px;
                     height: auto;
                     
