@@ -112,17 +112,25 @@
     }
 
     &trouble {
+        width: 100vw;
+        height: auto;
+
         &__inner {
-            max-width: 1000px;
+            width: 100%;
+            // max-width: 1100px;
             height: auto;
 
             margin: 0 auto;
-            padding-top: 178px;
-            // margin-top: 178px;
+
+            // padding-top: 178px;
+            // padding: 0 50px;
+            padding-top: 12.125%;
         }
 
         &__title {
-            max-width: 460px;
+            // max-width: 460px;
+            // width: 46%;
+            width: clamp(360px, 31.944444444%, 920px);
             height: auto;
 
             margin: 0 auto;
@@ -152,23 +160,27 @@
             flex-direction: row;
             justify-content: center;
             align-items: center;
-            gap: 30px;
+            gap: clamp(10px, 2.083333333%, 60px);
+            // gap: 30px;
 
-            margin-top: 70px;
+            // margin-top: 5%;
+            margin-top: max(25px, 5%);
+            padding: 0 20px;
 
             &Item {
                 &:nth-child(1) {
-                    max-width: 227px;
+                    width: clamp(187px, 15.763888888%, 454px);
+                    // width: 15.763888888%;
                     height: auto;
                 }
 
                 &:nth-child(2) {
-                    max-width: 248px;
+                    width: clamp(198px, 17.222222222%, 495px);
                     height: auto;
                 }
 
                 &:nth-child(3) {
-                    max-width: 252px;
+                    width: clamp(201px, 17.5%, 501px);
                     height: auto;
                 }
 
@@ -177,11 +189,16 @@
         }
 
         &__text {
-            max-width: 620px;
+            // width: 43.055555555%;
+            width: clamp(580px, 46.055555555%, 1240px);
             height: auto;
 
             margin: 0 auto;
-            margin-top: 60px;
+            // margin-top: 4.125%;
+            margin-top: max(30px, 4.125%);
+
+            padding: 0 20px;
+
             text-align: center;
 
             @include m.img100;
