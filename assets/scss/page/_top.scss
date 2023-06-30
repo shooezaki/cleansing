@@ -112,10 +112,7 @@
             margin: 0 auto;
             text-align: center;
 
-            img {
-                width: 100%;
-                height: auto;
-            }
+            @include m.img100;
 
             // p {
             //     @include m.fontSet01;
@@ -142,25 +139,24 @@
             gap: 30px;
 
             margin-top: 70px;
-            
+
             &Item {
                 &:nth-child(1) {
                     max-width: 227px;
                     height: auto;
                 }
+
                 &:nth-child(2) {
                     max-width: 248px;
                     height: auto;
                 }
+
                 &:nth-child(3) {
                     max-width: 252px;
                     height: auto;
                 }
 
-                img {
-                    width: 100%;
-                    height: auto;
-                }
+                @include m.img100;
             }
         }
 
@@ -172,10 +168,7 @@
             margin-top: 60px;
             text-align: center;
 
-            img {
-                width: 100%;
-                height: auto;
-            }
+            @include m.img100;
         }
     }
 
@@ -194,10 +187,7 @@
 
             margin: 0 auto;
 
-            img {
-                width: 100%;
-                height: auto;
-            }
+            @include m.img100;
         }
 
         &__list {
@@ -224,10 +214,7 @@
                     max-width: 350px;
                     height: auto;
 
-                    img {
-                        width: 100%;
-                        height: auto;
-                    }
+                    @include m.img100;
                 }
 
                 &Point {
@@ -236,28 +223,21 @@
                             max-width: 343px;
                             height: auto;
 
-                            img {
-                                width: 100%;
-                                height: auto;
-                            }
+                            @include m.img100;
                         }
+
                         &--02 {
                             max-width: 571px;
                             height: auto;
 
-                            img {
-                                width: 100%;
-                                height: auto;
-                            }
+                            @include m.img100;
                         }
+
                         &--03 {
                             max-width: 501px;
                             height: auto;
 
-                            img {
-                                width: 100%;
-                                height: auto;
-                            }
+                            @include m.img100;
                         }
                     }
                 }
@@ -318,7 +298,7 @@
             align-items: center;
 
             margin-top: 44px;
-            
+
             &Item {
                 width: 87px;
                 height: auto;
@@ -397,10 +377,10 @@
 
             margin: 0 auto;
 
-            & > &Item:not(:first-child) {
+            &>&Item:not(:first-child) {
                 display: none;
             }
-            
+
             &Item {
                 // max-width: 750px;
                 width: 100%;
@@ -415,13 +395,13 @@
 
                     max-width: 750px;
                     height: auto;
-                    
+
                     margin: 0 auto;
 
                     &Pic {
                         max-width: 332px;
                         height: auto;
-    
+
                         img {
                             width: 100%;
                             height: auto;
@@ -433,10 +413,7 @@
                             max-width: 225px;
                             height: auto;
 
-                            img {
-                                width: 100%;
-                                height: auto;
-                            }
+                            @include m.img100;
                         }
 
                         &Text {

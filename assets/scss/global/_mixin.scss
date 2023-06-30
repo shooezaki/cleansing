@@ -9,6 +9,14 @@ $breakpoints: (
   "tab-only": "screen and (min-width: 600px) and (max-width: 1023px)",
 );
 
+// img
+@mixin img100 {
+  img {
+    width: 100%;
+    height: auto;
+  }
+}
+
 // hover
 @mixin hover01 {
   transition: opacity v.$transition01;
