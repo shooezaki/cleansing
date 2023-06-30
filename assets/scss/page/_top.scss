@@ -205,12 +205,90 @@
         }
     }
 
-    &about {
+    &product {
+        width: 100vw;
+        height: auto;
+        aspect-ratio: 1440 / 823;
+
+        overflow: hidden;
+
         &__inner {
-            max-width: 1000px;
+            background: aqua;
+            width: 120%;
+            height: 100%;
+            translate: -10%;
+            animation: fluid-animation 10s ease 0s infinite normal;
+
+            @keyframes fluid-animation {
+                // 0%, 100% {
+                //     border-radius: 59% 41% 21% 79% / 62% 53% 47% 38%;
+                // }
+                // 50% {
+                //     border-radius: 26% 74% 52% 48% / 52% 32% 68% 48%;
+                // }
+                0%, 100% {
+                    border-radius: 59% 20% 21% 50% / 55% 53% 47% 38%;
+                }
+                50% {
+                    border-radius: 26% 40% 40% 48% / 30% 32% 50% 48%;
+                }
+            }
+        }
+
+        // &__wave {
+        //     background: aqua;
+        //     width: 100%;
+        //     height: 100%;
+        //     animation: fluid-animation 10s ease 0s infinite normal;
+
+        //     @keyframes fluid-animation {
+        //         // 0%, 100% {
+        //         //     border-radius: 59% 41% 21% 79% / 62% 53% 47% 38%;
+        //         // }
+        //         // 50% {
+        //         //     border-radius: 26% 74% 52% 48% / 52% 32% 68% 48%;
+        //         // }
+        //         0%, 100% {
+        //             border-radius: 20% 41% 21% 40% / 30% 53% 47% 38%;
+        //         }
+        //         50% {
+        //             border-radius: 26% 74% 52% 48% / 52% 32% 40% 48%;
+        //         }
+        //     }
+        // }
+
+        // &__sample {
+        //     overflow: hidden;
+        //     box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+        //     margin: 0 auto;
+        //     width: 300px;
+        //     height: 300px;
+        //     background-color: #fff;
+
+        //     svg path {
+        //         fill: #3168dd;
+        //         animation: wave linear 4s infinite;
+
+        //         @keyframes wave {
+        //             from {
+        //                 transform:translate(0);
+        //             }
+        //             to {
+        //                 transform:translate(-50%);
+        //             }
+        //         }
+        //     }
+        // }
+    }
+
+    &about {
+        width: 100vw;
+        height: auto;
+
+        &__inner {
+            width: 100%;
             height: auto;
 
-            margin: 0 auto;
             padding-top: 158px;
         }
 

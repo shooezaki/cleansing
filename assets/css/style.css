@@ -714,10 +714,34 @@ ul {
   width: 100%;
   height: auto;
 }
-.p-about__inner {
-  max-width: 1000px;
+.p-product {
+  width: 100vw;
   height: auto;
-  margin: 0 auto;
+  aspect-ratio: 1440/823;
+  overflow: hidden;
+}
+.p-product__inner {
+  background: aqua;
+  width: 120%;
+  height: 100%;
+  translate: -10%;
+  animation: fluid-animation 10s ease 0s infinite normal;
+}
+@keyframes fluid-animation {
+  0%, 100% {
+    border-radius: 59% 20% 21% 50%/55% 53% 47% 38%;
+  }
+  50% {
+    border-radius: 26% 40% 40% 48%/30% 32% 50% 48%;
+  }
+}
+.p-about {
+  width: 100vw;
+  height: auto;
+}
+.p-about__inner {
+  width: 100%;
+  height: auto;
   padding-top: 158px;
 }
 .p-about__title {
