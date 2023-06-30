@@ -6,7 +6,7 @@
         position: relative;
 
         width: 100%;
-        max-height: 800px;
+        // max-height: 800px;
         // height: 98.051157125vh;
         // height: 90%;
         aspect-ratio: 9 / 5;
@@ -46,10 +46,14 @@
             // top: 30px;
             // left: 124px;
             top: 3.5%;
-            left: 8.5%;
+            left: 11.5%;
+
+            width: 24.305555555%;
 
             &Logo {
                 display: block;
+
+                @include m.img100;
 
                 img {
                     filter: brightness(0) invert(1);
@@ -63,12 +67,24 @@
             // left: 220px;
             top: 30%;
             left: 15%;
+
+            width: 24.097222222%;
+            height: auto;
+
+            @include m.img100;
         }
 
         &__shop {
             position: absolute;
-            top: 27px;
-            right: 120px;
+            // top: 27px;
+            // right: 120px;
+            top: 3.5%;
+            right: 8.5%;
+
+            width: max(44px, 3.055555555%);
+            height: auto;
+
+            @include m.img100;
         }
 
         &__wave {

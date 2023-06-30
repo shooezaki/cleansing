@@ -594,7 +594,6 @@ ul {
 .p-kv {
   position: relative;
   width: 100%;
-  max-height: 800px;
   aspect-ratio: 9/5;
   display: inline-block;
   margin: 0 auto;
@@ -611,10 +610,15 @@ ul {
 .p-kv__title {
   position: absolute;
   top: 3.5%;
-  left: 8.5%;
+  left: 11.5%;
+  width: 24.305555555%;
 }
 .p-kv__titleLogo {
   display: block;
+}
+.p-kv__titleLogo img {
+  width: 100%;
+  height: auto;
 }
 .p-kv__titleLogo img {
   filter: brightness(0) invert(1);
@@ -623,11 +627,23 @@ ul {
   position: absolute;
   top: 30%;
   left: 15%;
+  width: 24.097222222%;
+  height: auto;
+}
+.p-kv__copy img {
+  width: 100%;
+  height: auto;
 }
 .p-kv__shop {
   position: absolute;
-  top: 27px;
-  right: 120px;
+  top: 3.5%;
+  right: 8.5%;
+  width: max(44px, 3.055555555%);
+  height: auto;
+}
+.p-kv__shop img {
+  width: 100%;
+  height: auto;
 }
 .p-kv__wave {
   position: absolute;
