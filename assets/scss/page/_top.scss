@@ -221,7 +221,8 @@
             animation: fluid-animation 10s ease 0s infinite normal;
 
             background: url(../img/top/product_bg.jpg) no-repeat;
-            background-size: cover;
+            background-size: 80%;
+            background-position: center;
 
             @keyframes fluid-animation {
                 // 0%, 100% {
