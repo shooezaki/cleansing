@@ -719,13 +719,15 @@ ul {
   height: auto;
   aspect-ratio: 1440/823;
   overflow: hidden;
+  margin-top: 12.125%;
 }
 .p-product__inner {
-  background: aqua;
   width: 120%;
   height: 100%;
   translate: -10%;
   animation: fluid-animation 10s ease 0s infinite normal;
+  background: url(../img/top/product_bg.jpg) no-repeat;
+  background-size: cover;
 }
 @keyframes fluid-animation {
   0%, 100% {
