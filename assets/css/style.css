@@ -573,6 +573,9 @@ ul {
   justify-content: center;
   row-gap: 9px;
 }
+.l-header__snsTitle img {
+  -webkit-user-drag: none;
+}
 .l-header__snsLogo {
   display: flex;
   flex-direction: column;
@@ -584,6 +587,7 @@ ul {
 .l-main {
   width: 100vw;
   background: #fff;
+  overflow: hidden;
 }
 .l-main__inner {
   width: 100%;
@@ -634,6 +638,9 @@ ul {
   width: 100%;
   height: auto;
 }
+.p-kv__copy img {
+  -webkit-user-drag: none;
+}
 .p-kv__shop {
   position: absolute;
   top: 3.5%;
@@ -677,6 +684,9 @@ ul {
   width: 100%;
   height: auto;
 }
+.p-trouble__title img {
+  -webkit-user-drag: none;
+}
 .p-trouble__list {
   display: flex;
   flex-direction: row;
@@ -702,6 +712,9 @@ ul {
   width: 100%;
   height: auto;
 }
+.p-trouble__listItem img {
+  -webkit-user-drag: none;
+}
 .p-trouble__text {
   width: clamp(580px, 46.055555555%, 1240px);
   height: auto;
@@ -713,6 +726,9 @@ ul {
 .p-trouble__text img {
   width: 100%;
   height: auto;
+}
+.p-trouble__text img {
+  -webkit-user-drag: none;
 }
 .p-product {
   width: 100vw;
@@ -810,67 +826,123 @@ ul {
   width: 100%;
   height: auto;
 }
+.p-about__title img {
+  -webkit-user-drag: none;
+}
 .p-about__list {
   display: flex;
   flex-direction: column;
-  gap: 198px;
   margin-top: 3.6115%;
 }
 .p-about__listItem {
   display: flex;
   flex-wrap: nowrap;
   flex-direction: row;
-  width: 79.861111111%;
+  width: 83.333333333%;
   height: auto;
   margin: 0 0 0 auto;
 }
 .p-about__listItem:nth-child(2) {
   flex-direction: row-reverse;
-  margin: 0 auto 0 0;
+  margin: 10.9725% auto 0 0;
+}
+.p-about__listItem:nth-child(3) {
+  margin: 10.0699% 0 0 auto;
 }
 .p-about__listItemPic {
   position: relative;
-  width: 30.434782608%;
+  z-index: 11;
+  width: 29.166666666%;
   height: auto;
 }
 .p-about__listItemPic img {
   width: 100%;
   height: auto;
 }
-.p-about__listItemPic::before {
+.p-about__listItemPicBg--01::before {
   content: "";
   display: block;
   position: absolute;
   top: -2%;
   left: -32%;
-  width: 450px;
-  height: 441px;
+  z-index: -1;
+  width: 128.573%;
+  height: 112.857%;
   background: url(../img/top/about_p1_pic_bg.png) no-repeat;
+  background-size: 100%;
+}
+.p-about__listItemPicBg--02::before {
+  content: "";
+  display: block;
+  position: absolute;
+  top: -24%;
+  left: -24%;
+  z-index: -1;
+  width: 139.43%;
+  height: 123.643%;
+  background: url(../img/top/about_p2_pic_bg.png) no-repeat;
+  background-size: 100%;
+}
+.p-about__listItemPicBg--03::before {
+  content: "";
+  display: block;
+  position: absolute;
+  top: 0%;
+  left: -18%;
+  z-index: -1;
+  width: 139.43%;
+  height: 123.643%;
+  background: url(../img/top/about_p3_pic_bg.png) no-repeat;
   background-size: 100%;
 }
 .p-about__listItemPoint {
   position: relative;
   z-index: 10;
-  width: 69.565217391%;
+  width: 70.833333333%;
   height: auto;
-  translate: 5%;
+  translate: 7%;
   display: flex;
   flex-direction: column;
 }
-.p-about__listItemPoint::before {
+.p-about__listItemPointBg--01::before {
+  content: "";
+  display: block;
+  position: absolute;
+  top: 3%;
+  left: -26%;
+  z-index: -2;
+  width: 128.942%;
+  height: 127.955%;
+  background: url(../img/top/about_p1_content_bg.png) no-repeat;
+  background-size: 100%;
+}
+.p-about__listItemPointBg--02::before {
   content: "";
   display: block;
   position: absolute;
   top: 0;
-  left: -34%;
-  z-index: -1;
-  width: 132.75%;
+  left: -18%;
+  z-index: -2;
+  width: 128.942%;
+  height: 127.955%;
+  background: url(../img/top/about_p1_content_bg.png) no-repeat;
+  background-size: 100%;
+  transform: scale(-1, 1);
+}
+.p-about__listItemPointBg--03::before {
+  content: "";
+  display: block;
+  position: absolute;
+  top: 3%;
+  left: -26%;
+  z-index: -2;
+  width: 128.942%;
   height: 127.955%;
   background: url(../img/top/about_p1_content_bg.png) no-repeat;
   background-size: 100%;
 }
 .p-about__listItemPointTitle--01 {
-  width: 42.875%;
+  width: 40.352941176%;
   height: auto;
   margin-top: 2.6%;
 }
@@ -878,24 +950,35 @@ ul {
   width: 100%;
   height: auto;
 }
+.p-about__listItemPointTitle--01 img {
+  -webkit-user-drag: none;
+}
 .p-about__listItemPointTitle--02 {
-  width: 71.375%;
+  width: 67.176470588%;
   height: auto;
+  margin: -3.25% 14% 0 auto;
 }
 .p-about__listItemPointTitle--02 img {
   width: 100%;
   height: auto;
 }
+.p-about__listItemPointTitle--02 img {
+  -webkit-user-drag: none;
+}
 .p-about__listItemPointTitle--03 {
-  width: 62.625%;
+  width: 58.94117647%;
   height: auto;
+  margin-top: 2.6%;
 }
 .p-about__listItemPointTitle--03 img {
   width: 100%;
   height: auto;
 }
+.p-about__listItemPointTitle--03 img {
+  -webkit-user-drag: none;
+}
 .p-about__listItemPointContent--01 {
-  width: 45.25%;
+  width: 42.588235294%;
   height: auto;
   margin-top: 3.059%;
 }
@@ -903,10 +986,52 @@ ul {
   width: 100%;
   height: auto;
 }
+.p-about__listItemPointContent--02 {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  justify-content: center;
+  gap: 3.529411764%;
+  margin-top: 4%;
+}
+.p-about__listItemPointContent--02Img {
+  width: 23.529411764%;
+  height: auto;
+}
+.p-about__listItemPointContent--02Img img {
+  width: 100%;
+  height: auto;
+}
+.p-about__listItemPointContent--03 {
+  margin-top: 1.5%;
+  margin-left: 0.6%;
+}
+.p-about__listItemPointContent--03Text {
+  font-family: "noto sans jp", sans-serif;
+  font-weight: 400;
+  font-size: 1.6rem;
+  line-height: 2.8rem;
+  letter-spacing: 0.05em;
+}
+.p-about__listItemPointContent--03Text span {
+  font-size: 1.2rem;
+  line-height: 2.2rem;
+  vertical-align: top;
+}
+.p-about__listItemPointContent--03Img {
+  width: 59.882352941%;
+  height: auto;
+  margin-top: 2%;
+  margin-left: 2%;
+}
+.p-about__listItemPointContent--03Img img {
+  width: 100%;
+  height: auto;
+}
 .p-about__wave {
   width: 100%;
   height: auto;
-  margin-top: 90px;
+  margin-top: 9.7225%;
 }
 .p-about__wave img {
   width: 100%;
@@ -914,8 +1039,11 @@ ul {
 }
 .p-detailed {
   background: #F3F3F3;
+  width: 100vw;
+  height: auto;
   margin-top: -4px;
-  padding-top: 34px;
+  padding: 0 10px;
+  padding-top: 2.3615%;
 }
 .p-detailed__inner {
   max-width: 512px;

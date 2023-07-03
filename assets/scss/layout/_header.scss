@@ -20,6 +20,12 @@
             justify-content: center;
             row-gap: 9px;
 
+            &Title {
+                img {
+                    -webkit-user-drag: none;
+                }
+            }
+
             &Logo {
                 display: flex;
                 flex-direction: column;
