@@ -732,10 +732,10 @@ ul {
 }
 @keyframes fluid-animation {
   0%, 100% {
-    border-radius: 60% 60% 60% 60%/10% 10% 10% 10%;
+    border-radius: 300% 150% 300% 150%/150% 300% 150% 300%;
   }
   50% {
-    border-radius: 10% 10% 10% 10%/60% 60% 60% 60%;
+    border-radius: 150% 300% 150% 300%/300% 150% 300% 150%;
   }
 }
 .p-product__wrapper {
@@ -775,17 +775,18 @@ ul {
   height: 100%;
   text-decoration: none;
   background: #CFE3E8;
+  font-family: "noto sans jp", sans-serif;
   text-align: center;
   color: #FFFFFF;
   font-size: 16px;
-  font-weight: bold;
+  font-weight: 700;
   border-radius: 50px;
   -webkit-border-radius: 50px;
   -moz-border-radius: 50px;
   transition: all 0.4s ease;
 }
 .p-product__btn a:hover {
-  background: #dee9ec;
+  background: #82dbf7;
   color: #FFFFFF;
   margin-left: 0px;
   margin-top: 0px;
@@ -798,10 +799,10 @@ ul {
 .p-about__inner {
   width: 100%;
   height: auto;
-  padding-top: 158px;
+  padding-top: 10.9725%;
 }
 .p-about__title {
-  max-width: 367px;
+  width: clamp(360px, 25.486111111%, 734px);
   height: auto;
   margin: 0 auto;
 }
