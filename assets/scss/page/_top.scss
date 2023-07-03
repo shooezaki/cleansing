@@ -393,47 +393,126 @@
             flex-direction: column;
             gap: 198px;
 
-            margin-top: 52px;
+            // margin-top: 52px;
+            margin-top: 3.6115%;
 
             &Item {
                 display: flex;
                 flex-wrap: nowrap;
                 flex-direction: row;
 
-                margin-left: 0;
+                // width: 83.333333333%;
+                width: 79.861111111%;
+                height: auto;
+
+                margin: 0 0 0 auto;
 
                 &:nth-child(2) {
                     flex-direction: row-reverse;
 
-                    margin-right: 0;
+                    margin: 0 auto 0 0;
                 }
 
                 &Pic {
-                    max-width: 350px;
+                    position: relative;
+
+                    // max-width: 350px;
+                    // width: 29.166666666%;
+                    width: 30.434782608%;
                     height: auto;
 
                     @include m.img100;
+
+                    &::before {
+                        content: '';
+                        display: block;
+
+                        position: absolute;
+                        top: -2%;
+                        left: -32%;
+
+                        width: 450px;
+                        // width: 128.573%;
+                        height: 441px;
+                        // height: 10%;
+
+                        background: url(../img/top/about_p1_pic_bg.png) no-repeat;
+                        background-size: 100%;
+                    }
                 }
 
                 &Point {
+                    position: relative;
+                    z-index: 10;
+
+                    // width: 70.833333333%;
+                    width: 69.565217391%;
+                    height: auto;
+
+                    translate: 5%;
+
+                    display: flex;
+                    flex-direction: column;
+
+                    &::before {
+                        content: '';
+                        display: block;
+
+                        position: absolute;
+                        top: 0;
+                        left: -34%;
+                        z-index: -1;
+
+                        // width: 1062px;
+                        width: 132.75%;
+                        // height: 500px;
+                        height: 127.955%;
+
+                        background: url(../img/top/about_p1_content_bg.png) no-repeat;
+                        background-size: 100%;
+                    }
+
                     &Title {
                         &--01 {
-                            max-width: 343px;
+                            // max-width: 343px;
+                            // width: 28.583333333%;
+                            // width: 40.352941176%;
+                            width: 42.875%;
                             height: auto;
+
+                            margin-top: 2.6%;
 
                             @include m.img100;
                         }
 
                         &--02 {
-                            max-width: 571px;
+                            // max-width: 571px;
+                            // width: 47.583333333%;
+                            // width: 67.176470588%;
+                            width: 71.375%;
                             height: auto;
 
                             @include m.img100;
                         }
 
                         &--03 {
-                            max-width: 501px;
+                            // max-width: 501px;
+                            // width: 41.75%;
+                            // width: 58.94117647%;
+                            width: 62.625%;
                             height: auto;
+
+                            @include m.img100;
+                        }
+                    }
+
+                    &Content {
+                        &--01 {
+                            // width: 42.588235294%;
+                            width: 45.25%;
+                            height: auto;
+
+                            margin-top: 3.059%;
 
                             @include m.img100;
                         }
