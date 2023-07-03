@@ -929,6 +929,9 @@ ul {
   background-size: 100%;
   transform: scale(-1, 1);
 }
+.p-about__listItemPointBg--03 {
+  translate: 4%;
+}
 .p-about__listItemPointBg--03::before {
   content: "";
   display: block;
@@ -1007,6 +1010,7 @@ ul {
   margin-left: 0.6%;
 }
 .p-about__listItemPointContent--03Text {
+  padding-right: 18px;
   font-family: "noto sans jp", sans-serif;
   font-weight: 400;
   font-size: 1.6rem;
@@ -1042,8 +1046,8 @@ ul {
   width: 100vw;
   height: auto;
   margin-top: -4px;
-  padding: 0 10px;
-  padding-top: 2.3615%;
+  padding: 0 16px;
+  padding-top: 34px;
 }
 .p-detailed__inner {
   max-width: 512px;
@@ -1125,6 +1129,9 @@ ul {
 .p-step__title img {
   width: 100%;
   height: auto;
+}
+.p-step__title img {
+  -webkit-user-drag: none;
 }
 .p-step__sliderList {
   max-width: 1038px;
