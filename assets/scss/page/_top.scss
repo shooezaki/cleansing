@@ -1097,15 +1097,30 @@
                 width: 110%;
                 height: auto;
 
+                cursor: pointer;
+
                 & img:nth-child(2) {
                     @include m.hover02;
                 }
 
-                a {
+                &:not(:active) &ThumYtb {
+                    opacity: 0;
+                    pointer-events: none;
+                }
+                &:active &ThumYtb {
+                    opacity: 1;
+                }
+
+                &Thum {
                     position: relative;
                     top: 0;
                     left: 0;
-                    display: inline-block;
+                    z-index: 10;
+
+                    display: block;
+
+                    width: 100%;
+                    aspect-ratio: 22 / 13;
 
                     img:first-child {
                         width: 100%;
@@ -1143,6 +1158,22 @@
 
                         -webkit-user-drag: none;
                     }
+
+                    &Ytb {
+                        position: absolute;
+                        top: 49%;
+                        left: 50%;
+                        transform: translate(-50%, -50%);
+                        -webkit-transform: translate(-50%, -50%);
+                        -ms-transform: translate(-50%, -50%);
+
+                        width: 100%;
+                        height: auto;
+
+                        border-radius: 30px;
+
+                        overflow: hidden;
+                     }
                 }
             }
         }
@@ -1296,24 +1327,4 @@
             }
         }
     }
-}
-
-/*========= モーダル表示のためのCSS ===============*/
-
-/*動画表示のモーダルの余白を変更したい場合*/
-.modaal-video .modaal-inner-wrapper {
-    padding: 0;
-}
-
-/*モーダルのボタンの色を変更したい場合*/
-.modaal-close:after,
-.modaal-close:before {
-    background: #ccc;
-}
-
-.modaal-close:focus:after,
-.modaal-close:focus:before,
-.modaal-close:hover:after,
-.modaal-close:hover:before {
-    background: #666;
 }

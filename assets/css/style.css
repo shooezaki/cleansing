@@ -1512,6 +1512,7 @@ ul {
   -ms-transform: translate(-50%, -90%);
   width: 110%;
   height: auto;
+  cursor: pointer;
 }
 .p-step__movLink img:nth-child(2) {
   transition: opacity 0.35s;
@@ -1519,18 +1520,28 @@ ul {
 .p-step__movLink img:nth-child(2):hover {
   opacity: 0;
 }
-.p-step__movLink a {
+.p-step__movLink:not(:active) .p-step__movLinkThumYtb {
+  opacity: 0;
+  pointer-events: none;
+}
+.p-step__movLink:active .p-step__movLinkThumYtb {
+  opacity: 1;
+}
+.p-step__movLinkThum {
   position: relative;
   top: 0;
   left: 0;
-  display: inline-block;
+  z-index: 10;
+  display: block;
+  width: 100%;
+  aspect-ratio: 22/13;
 }
-.p-step__movLink a img:first-child {
+.p-step__movLinkThum img:first-child {
   width: 100%;
   height: auto;
   -webkit-user-drag: none;
 }
-.p-step__movLink a img:nth-child(2) {
+.p-step__movLinkThum img:nth-child(2) {
   position: absolute;
   top: 49%;
   left: 50%;
@@ -1541,7 +1552,7 @@ ul {
   height: auto;
   -webkit-user-drag: none;
 }
-.p-step__movLink a img:nth-child(3) {
+.p-step__movLinkThum img:nth-child(3) {
   position: absolute;
   top: 50%;
   left: 50%;
@@ -1552,6 +1563,18 @@ ul {
   height: auto;
   filter: drop-shadow(1px 1px 10px rgba(0, 0, 0, 0.1));
   -webkit-user-drag: none;
+}
+.p-step__movLinkThumYtb {
+  position: absolute;
+  top: 49%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  -webkit-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  width: 100%;
+  height: auto;
+  border-radius: 30px;
+  overflow: hidden;
 }
 .p-shop {
   width: 100vw;
@@ -1668,23 +1691,4 @@ ul {
   margin-left: 0px;
   margin-top: 0px;
   box-shadow: none;
-}
-
-/*========= モーダル表示のためのCSS ===============*/
-/*動画表示のモーダルの余白を変更したい場合*/
-.modaal-video .modaal-inner-wrapper {
-  padding: 0;
-}
-
-/*モーダルのボタンの色を変更したい場合*/
-.modaal-close:after,
-.modaal-close:before {
-  background: #ccc;
-}
-
-.modaal-close:focus:after,
-.modaal-close:focus:before,
-.modaal-close:hover:after,
-.modaal-close:hover:before {
-  background: #666;
 }/*# sourceMappingURL=style.css.map */
