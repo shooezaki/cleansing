@@ -1084,6 +1084,24 @@
                 img {
                     -webkit-user-drag: none;
                 }
+
+                /* チェックボックス非表示 */
+                input[type=checkbox] {
+                    display: none;
+                }
+
+                /* メニューの表示 */
+                input[type=checkbox]:checked~#overlay {
+                    opacity: 1;
+                    transition: opacity 1s ease 0s;
+                    pointer-events: auto;
+                }
+
+                input[type=checkbox]:not(:checked)~#overlay {
+                    opacity: 0;
+                    transition: opacity 1s ease 0s;
+                    pointer-events: none;
+                }
             }
 
             &Link {
@@ -1099,16 +1117,9 @@
 
                 cursor: pointer;
 
-                & img:nth-child(2) {
-                    @include m.hover02;
-                }
-
-                &:not(:active) &ThumYtb {
+                &:hover img:nth-child(2) {
+                    transition: opacity 0.35s;
                     opacity: 0;
-                    pointer-events: none;
-                }
-                &:active &ThumYtb {
-                    opacity: 1;
                 }
 
                 &Thum {
@@ -1131,7 +1142,7 @@
 
                     img:nth-child(2) {
                         position: absolute;
-                        top: 49%;
+                        top: 49.3%;
                         left: 50%;
                         transform: translate(-50%, -50%);
                         -webkit-transform: translate(-50%, -50%);
@@ -1158,22 +1169,33 @@
 
                         -webkit-user-drag: none;
                     }
+                }
+            }
 
-                    &Ytb {
-                        position: absolute;
-                        top: 49%;
-                        left: 50%;
-                        transform: translate(-50%, -50%);
-                        -webkit-transform: translate(-50%, -50%);
-                        -ms-transform: translate(-50%, -50%);
+            &Ytb {
+                position: absolute;
+                top: 52.5%;
+                left: 50%;
+                transform: translate(-50%, -50%);
+                -webkit-transform: translate(-50%, -50%);
+                -ms-transform: translate(-50%, -50%);
 
-                        width: 100%;
-                        height: auto;
+                width: 110%;
+                height: auto;
+                aspect-ratio: 22 / 13;
 
-                        border-radius: 30px;
+                display: block;
 
-                        overflow: hidden;
-                     }
+                border-radius: 30px;
+
+                overflow: hidden;
+
+                iframe {
+                    width: 100%;
+                    height: auto;
+                    aspect-ratio: 22 / 13;
+
+                    display: block;
                 }
             }
         }
@@ -1327,4 +1349,8 @@
             }
         }
     }
+}
+
+#checkbox_1:checked~table div iframe {
+    display: none;
 }

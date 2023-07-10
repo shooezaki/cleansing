@@ -1495,6 +1495,8 @@ ul {
   max-width: 400px;
   height: auto;
   margin: 0 auto;
+  /* チェックボックス非表示 */
+  /* メニューの表示 */
 }
 .p-step__movTitle img {
   width: 100%;
@@ -1502,6 +1504,19 @@ ul {
 }
 .p-step__movTitle img {
   -webkit-user-drag: none;
+}
+.p-step__movTitle input[type=checkbox] {
+  display: none;
+}
+.p-step__movTitle input[type=checkbox]:checked ~ #overlay {
+  opacity: 1;
+  transition: opacity 1s ease 0s;
+  pointer-events: auto;
+}
+.p-step__movTitle input[type=checkbox]:not(:checked) ~ #overlay {
+  opacity: 0;
+  transition: opacity 1s ease 0s;
+  pointer-events: none;
 }
 .p-step__movLink {
   position: absolute;
@@ -1514,18 +1529,9 @@ ul {
   height: auto;
   cursor: pointer;
 }
-.p-step__movLink img:nth-child(2) {
+.p-step__movLink:hover img:nth-child(2) {
   transition: opacity 0.35s;
-}
-.p-step__movLink img:nth-child(2):hover {
   opacity: 0;
-}
-.p-step__movLink:not(:active) .p-step__movLinkThumYtb {
-  opacity: 0;
-  pointer-events: none;
-}
-.p-step__movLink:active .p-step__movLinkThumYtb {
-  opacity: 1;
 }
 .p-step__movLinkThum {
   position: relative;
@@ -1543,7 +1549,7 @@ ul {
 }
 .p-step__movLinkThum img:nth-child(2) {
   position: absolute;
-  top: 49%;
+  top: 49.3%;
   left: 50%;
   transform: translate(-50%, -50%);
   -webkit-transform: translate(-50%, -50%);
@@ -1564,17 +1570,25 @@ ul {
   filter: drop-shadow(1px 1px 10px rgba(0, 0, 0, 0.1));
   -webkit-user-drag: none;
 }
-.p-step__movLinkThumYtb {
+.p-step__movYtb {
   position: absolute;
-  top: 49%;
+  top: 52.5%;
   left: 50%;
   transform: translate(-50%, -50%);
   -webkit-transform: translate(-50%, -50%);
   -ms-transform: translate(-50%, -50%);
-  width: 100%;
+  width: 110%;
   height: auto;
+  aspect-ratio: 22/13;
+  display: block;
   border-radius: 30px;
   overflow: hidden;
+}
+.p-step__movYtb iframe {
+  width: 100%;
+  height: auto;
+  aspect-ratio: 22/13;
+  display: block;
 }
 .p-shop {
   width: 100vw;
@@ -1691,4 +1705,8 @@ ul {
   margin-left: 0px;
   margin-top: 0px;
   box-shadow: none;
+}
+
+#checkbox_1:checked ~ table div iframe {
+  display: none;
 }/*# sourceMappingURL=style.css.map */
