@@ -9,11 +9,34 @@
 
         overflow: hidden;
 
-        &__inner {
-            width: 100%;
-            height: auto;
+        @include m.breakpointPc-tab {
+            &__inner {
+                width: 100%;
+                height: auto;
+    
+                margin: 0 auto;
+            }
 
-            margin: 0 auto;
+            &__sp {
+                &__inner {
+                    display: none;
+                }
+            }
+        }
+
+        @include m.breakpointSp {
+            &__inner {
+                display: none;
+            }
+
+            &__sp {
+                &__inner {
+                    width: 100%;
+                    height: auto;
+        
+                    margin: 0 auto;
+                }
+            }
         }
     }
 }

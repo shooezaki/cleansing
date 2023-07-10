@@ -1,3 +1,17 @@
+// breakpoint
+$breakpoints: (
+    "sp": "screen and (max-width: 599px)",
+    "tab": "screen and (max-width: 1023px)",
+    "pc-tab": "screen and (min-width: 600px)",
+    "pc-only": "screen and (min-width: 1024px)",
+    "tab-only": "screen and (min-width: 600px) and (max-width: 1023px)",
+);
+
+$sp: 599px;
+$tab: 1023px;
+$pc-tab: 600px;
+$pc-only: 1024px;
+
 // color
 $black01: #000;
 $gray01: #7f7f7f;
@@ -39,5 +53,3 @@ $font-size05: 1.8rem;
 $font-size06: 2.4rem;
 $font-size07: 3.0rem;
 $font-size08: 3.6rem;
-
-

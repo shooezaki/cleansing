@@ -1,13 +1,31 @@
 @use "./valiables" as v;
 
 // breakpoint
-$breakpoints: (
-  "sp": "screen and (max-width: 599px)",
-  "tab": "screen and (max-width: 1023px)",
-  "pc-tab": "screen and (min-width: 600px)",
-  "pc-only": "screen and (min-width: 1024px)",
-  "tab-only": "screen and (min-width: 600px) and (max-width: 1023px)",
-);
+@mixin breakpointSp {
+  @media screen and (max-width: (v.$sp)) {
+    @content;
+  }
+}
+@mixin breakpointTab {
+  @media screen and (max-width: (v.$tab)) {
+    @content;
+  }
+}
+@mixin breakpointPc-tab {
+  @media screen and (min-width: (v.$pc-tab)) {
+    @content;
+  }
+}
+@mixin breakpointPc-only {
+  @media screen and (min-width: (v.$pc-only)) {
+    @content;
+  }
+}
+@mixin breakpointTab-only {
+  @media screen and (min-width: (v.$pc-tab)) and (max-width: (v.$pc-only)) {
+    @content;
+  }
+}
 
 // img
 @mixin img100 {
@@ -20,6 +38,7 @@ $breakpoints: (
 // hover
 @mixin hover01 {
   transition: opacity v.$transition01;
+
   &:hover {
     opacity: v.$opacity01;
   }
@@ -27,6 +46,7 @@ $breakpoints: (
 
 @mixin hover02 {
   transition: opacity v.$transition02;
+
   &:hover {
     opacity: v.$opacity02;
   }
@@ -34,19 +54,19 @@ $breakpoints: (
 
 // font
 @mixin fontSet01 {
-	font-family: v.$font-famiry-sans-serif01;
-	font-size: 1.6rem;
-	font-weight: 300;
-	line-height: 2.2em;
+  font-family: v.$font-famiry-sans-serif01;
+  font-size: 1.6rem;
+  font-weight: 300;
+  line-height: 2.2;
   letter-spacing: 0.1em;
-	color: v.$black01;
+  color: v.$black01;
 }
 
 @mixin fontSet02 {
-	font-family: v.$font-famiry-sans-serif01;
-	font-size: 1.2rem;
-	font-weight: 300;
-	line-height: 1.6;
+  font-family: v.$font-famiry-sans-serif01;
+  font-size: 1.2rem;
+  font-weight: 300;
+  line-height: 1.6;
   letter-spacing: -0.05em;
-	color: v.$black01;
+  color: v.$black01;
 }

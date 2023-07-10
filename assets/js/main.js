@@ -49,7 +49,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
 	// Intersection observerに渡すオプション
 	const options = {
-		rootMargin: "100px 0px"
+		rootMargin: "10px 0px"
 	}
 
 	// Intersection observerの初期化
