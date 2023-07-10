@@ -702,6 +702,37 @@ ul {
   color: black;
 }
 
+.bubble-background {
+  position: relative;
+  z-index: 5;
+  overflow: hidden;
+}
+
+/* 泡の見た目 */
+.bubble {
+  position: absolute;
+  bottom: -50px;
+  background: url(../img/top/bubble.png) no-repeat;
+  background-size: contain;
+  pointer-events: none;
+  animation: bubble 60s linear infinite;
+}
+
+/* 泡の一番明るい部分を疑似要素で表現 */
+/* 泡が上に浮かび上がっていくアニメーション */
+@keyframes bubble {
+  0% {
+    transform: translatY(0);
+    opacity: 1;
+  }
+  99% {
+    opacity: 1;
+  }
+  100% {
+    transform: translateY(-1500vh);
+    opacity: 0;
+  }
+}
 .l-header {
   position: fixed;
   top: 50%;
@@ -729,6 +760,12 @@ ul {
   align-items: center;
   justify-content: center;
   row-gap: 12px;
+}
+.l-header__snsLogoItem {
+  transition: opacity 0.2s;
+}
+.l-header__snsLogoItem:hover {
+  opacity: 0.7;
 }
 
 .l-main {
@@ -822,10 +859,14 @@ ul {
   right: 8.5%;
   width: max(44px, 3.055555555%);
   height: auto;
+  transition: opacity 0.2s;
 }
 .p-kv__shop img {
   width: 100%;
   height: auto;
+}
+.p-kv__shop:hover {
+  opacity: 0.7;
 }
 .p-kv__wave {
   position: absolute;
@@ -916,6 +957,7 @@ ul {
 }
 .p-product__inner {
   position: relative;
+  z-index: 10;
   width: 100%;
   height: 100%;
   animation: fluid-animation 10s ease 0s infinite normal;
@@ -995,6 +1037,8 @@ ul {
   padding-top: 10.9725%;
 }
 .p-about__title {
+  position: relative;
+  z-index: 10;
   width: clamp(360px, 25.486111111%, 734px);
   height: auto;
   margin: 0 auto;
@@ -1227,6 +1271,8 @@ ul {
   padding-top: 34px;
 }
 .p-detailed__inner {
+  position: relative;
+  z-index: 10;
   max-width: 512px;
   height: auto;
   margin: 0 auto;
@@ -1292,6 +1338,8 @@ ul {
   padding-top: 150px;
 }
 .p-step__inner {
+  position: relative;
+  z-index: 10;
   max-width: 1038px;
   height: auto;
   margin: 0 auto;
@@ -1620,6 +1668,7 @@ ul {
 }
 .p-shop__list {
   position: relative;
+  z-index: 10;
   max-width: 632px;
   height: auto;
   margin: 0 auto;

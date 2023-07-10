@@ -1,31 +1,59 @@
 $('.p-step__sliderList').slick({
-  dots: true,
-  infinite: true,
-  speed: 500,
-  fade: true,
-  cssEase: 'linear'
+	dots: true,
+	infinite: true,
+	speed: 500,
+	fade: true,
+	cssEase: 'linear'
 });
 
-// //初回のみモーダルをすぐ出す判定。flagがモーダル表示のstart_open後に代入される
-// var access = $.cookie('access')
-// if(!access){
-//   flag = true;
-//   $.cookie('access', false);
-// }else{
-//   flag = false  
-// }
+document.addEventListener('DOMContentLoaded', () => {
+	// コンテナを指定
+	const section = document.querySelector('.bubble-background');
 
-// //モーダル表示
-// $(".video-open").modaal({
-// start_open:flag, // ページロード時に表示するか
-// overlay_close:true,//モーダル背景クリック時に閉じるか
-// type: 'video',
-// background: '#28BFE7', // 背景色
-// overlay_opacity:0.8, // 透過具合
-// before_open:function(){// モーダルが開く前に行う動作
-//   $('html').css('overflow-y','hidden');/*縦スクロールバーを出さない*/
-// },
-// after_close:function(){// モーダルが閉じた後に行う動作
-//   $('html').css('overflow-y','scroll');/*縦スクロールバーを出す*/
-// }
-// });
+	// 泡を生成する関数
+	const createBubble = () => {
+		const bubbleEl = document.createElement('span');
+		bubbleEl.className = 'bubble';
+		const minSize = 220;
+		const maxSize = 260;
+		const size = Math.random() * (maxSize + 1 - minSize) + minSize;
+		bubbleEl.style.width = `${size}px`;
+		bubbleEl.style.height = `${size}px`;
+		bubbleEl.style.left = Math.random() * innerWidth + 'px';
+		section.appendChild(bubbleEl);
+
+		// 一定時間が経てば泡を消す
+		setTimeout(() => {
+			bubbleEl.remove();
+		}, 10000000);
+	}
+
+	// 泡の生成を開始するトリガー（初期値はOFF）
+	let activeBubble = null;
+
+	// 泡の生成をストップする関数
+	const stopBubble = () => {
+		clearInterval(activeBubble);
+	};
+
+	// Intersection observerに渡すコールバック関数
+	const cb = (entries) => {
+		entries.forEach(entry => {
+			if (entry.isIntersecting) {
+				activeBubble = setInterval(createBubble, 5000);
+			} else {
+				stopBubble();
+			}
+		})
+	};
+
+	// Intersection observerに渡すオプション
+	const options = {
+		rootMargin: "100px 0px"
+	}
+
+	// Intersection observerの初期化
+	const io = new IntersectionObserver(cb, options);
+	io.POLL_INTERVAL = 100; // Polyfill
+	io.observe(section);
+});
