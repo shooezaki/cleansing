@@ -25,12 +25,28 @@ $breakpoints: (
   }
 }
 
+@mixin hover02 {
+  transition: opacity v.$transition02;
+  &:hover {
+    opacity: v.$opacity02;
+  }
+}
+
 // font
 @mixin fontSet01 {
 	font-family: v.$font-famiry-sans-serif01;
-	font-size: v.$font_size04;
+	font-size: 1.6rem;
 	font-weight: 300;
-	line-height: 2.0em;
-  letter-spacing: -0.01em;
+	line-height: 2.2em;
+  letter-spacing: 0.1em;
+	color: v.$black01;
+}
+
+@mixin fontSet02 {
+	font-family: v.$font-famiry-sans-serif01;
+	font-size: 1.2rem;
+	font-weight: 300;
+	line-height: 1.6;
+  letter-spacing: -0.05em;
 	color: v.$black01;
 }

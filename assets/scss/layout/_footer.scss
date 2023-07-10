@@ -1,0 +1,16 @@
+@use "../global/mixin" as m;
+@use "../global/valiables" as v;
+
+.l- {
+    &footer {
+        text-align: center;
+        margin: 0 auto;
+
+        @include m.fontSet02;
+        color: v.$gray04;
+        letter-spacing: 0.05em;
+        white-space: nowrap;
+
+        padding: 5% 0 2%;
+    }
+}
