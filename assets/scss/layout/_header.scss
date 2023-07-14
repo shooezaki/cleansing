@@ -51,9 +51,9 @@
             position: fixed;
             // top: 234px;
             top: 50%;
-            left: 2.7%;
+            left: 2.2%;
             transform: translateY(-50%);
-            z-index: 100;
+            z-index: 1000;
     
             display: inline-block;
     
@@ -70,9 +70,6 @@
     
                 &Title {
                     height: auto;
-                    img {
-                        -webkit-user-drag: none;
-                    }
                 }
     
                 &Logo {
@@ -80,9 +77,13 @@
                     flex-direction: column;
                     align-items: center;
                     justify-content: center;
-                    row-gap: 12px;
+                    row-gap: 10px;
     
                     &Item {
+                        width: 26px;
+
+                        @include m.img100;
+
                         @include m.hover01;
                     }
                 }
